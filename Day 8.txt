@@ -65,7 +65,7 @@ and build container from ubuntu image
 
 apt-get update
 
-curl fsSl https://get.docker.com/ | sh                                                   { install docker}
+curl -fsSl https://get.docker.com/ | sh                                                   { install docker}
 docker --version
 service docker start                                                                 { want to know docker version}
 sudo docker run ubuntu                                                          {pull ubuntu image from dockerhub}  
