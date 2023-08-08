@@ -1,0 +1,40 @@
+Day 1
+
+
+1.	Created lamp server on ec2 instance with port 80 http
+
+a.	Launch ec2 instance with security group with port 22(ssh) and port 80(http)
+b.	Connect to ec2 instance and ssh give following commands to install apache server in linux and mysql and other things
+
+sudo su ( switch to root user)
+yum install httpd  ( command for creating apache server in linux)
+yum install mariadb mariadb-server
+yum install php php-mysql  (install 2 modules of php)
+systemctl start mariadb  (configure mariadb server)
+system enable mariadb   
+mysql_secure_installation
+asking for root password press enter
+
+systemctl start httpd  (start apache server)
+system enable httpd
+cd /var/www/html/        (in this directory you can put your php code or whatever code u want to put in)
+ls
+pwd
+vim index
+<?php
+Phpinfo();
+?>
+
+
+2.	Setting up application load balancer and creating target group as lamp server.
+
+
+3.	Creating auto scaling group and attaching load balancer to auto scaling group.
+
+
+
+
+
+All application are working perfectly. There is no health check error.
+
+
