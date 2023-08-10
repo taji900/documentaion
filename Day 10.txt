@@ -1,4 +1,26 @@
+most used docker commands
 
+1. docker --version                                                           1. know the version of docker
+2. docker --help                                                              2.know the all possible commands used with docker
+3. docker build -t imagename .                                                3. build image from docker file (. specify the path)
+4. docker run -d --name iamgename -p 8080:80 containername                    4. create and deploy container and -p map the port 8080 of host to port 80 of container 
+  image and container name should be same after ward we can renameit
+5. docker pull iamgename                                                      5. pull any image from docker hub
+6. docker images                                                              6. list down all images in your local repo
+7. docker run imagename                                                       7. to create running container out of it.
+8. docker build                                                               8. used to compile dockerfile for building custom docker image 
+9. docker container                                                          9. used to perform various commands with container
+    docker container log container id
+     docker container kill container id
+    docker container rm container id
+    docker container start conatiner id
 
-
-
+10. docker login                                                            10. login to docker hub to push image which you have created in local repo
+11. docker push                                                             11. push docker image from your local repo to docker hub
+12. docker ps                                                               12. shows the running container in host
+13. docker ps -a                                                            13. show both active and inactive container
+14. docker stop containerid                                                 14. stop any container
+15. docker rm containerid                                                   15. removes the container whose container id is specified in argument
+16. docker rmi imagename                                                    16. removes images whose name is specified
+17.  docker exec -it containerid bash                                       17. access an already running container and perform operation inside it.
+18. docker commit containerid imagename                                     18.creates s new image of an edited container on local repo
