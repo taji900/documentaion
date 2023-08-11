@@ -23,4 +23,14 @@ most used docker commands
 15. docker rm containerid                                                   15. removes the container whose container id is specified in argument
 16. docker rmi imagename                                                    16. removes images whose name is specified
 17.  docker exec -it containerid bash                                       17. access an already running container and perform operation inside it.
-18. docker commit containerid imagename                                     18.creates s new image of an edited container on local repo
+18. docker commit containerid imagename                                     18. creates new image of an edited container on local repo
+19. docker export --output="name of new tar file" conatiner id              19. export docker image to tar file in your local repo
+20. docker import path                                                      20. used to import content of tar file into local repo
+
+
+
+
+
+
+
+
