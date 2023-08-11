@@ -16,6 +16,52 @@ Dockerfile commands
 
 
 
+
+
+dockerfile for apache 
+
+FROM ubuntu:20.04
+
+ENV CONTAINER_TIMEZONE="Europe/Brussels"
+RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONTAINER_TIMEZONE > /etc/timezone
+
+RUN apt update && apt install -y apache2
+
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_RUN_DIR /var/www/html
+
+RUN echo 'Hello, docker' > /var/www/index.html
+
+ENTRYPOINT ["/usr/sbin/apache2"]
+CMD ["-D", "FOREGROUND"]
+
+
+
+
+
+dockerfile for installing nginx
+
+FROM nginx:1.10.1-alpine
+ COPY index.html /usr/share/nginx/html
+ EXPOSE 8080
+ CMD ["nginx", "-g", "daemon off;"]
+
+
+index.html file 
+
+<!doctype html>
+<html>
+  <head>
+    <title>LUIT Week 16 Project!</title>
+  </head>
+  <body>
+    <h1>This is our Custom Home Page</h1>
+  </body>
+</html>
+
+
 Docker compose
 
 docker compose is used to run multi container application. each conatiner will stand alone as application and all application will communiocate with each other on single host. eg . MEAN full stack java script solution { M= mongo db ,E= express , A= angular ,N= node.js} used to make web application which is fast robust and maintainable. 
