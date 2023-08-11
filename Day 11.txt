@@ -1,4 +1,24 @@
+Dockerfile commands
+
+1. FROM command - defines the base image from which the build process start.  eg. FROM ubuntu
+2. RUN command - it takes the command as argument to run to form an image, unlike CMD command which does not form image. eg. RUN apt-get install nginx
+3. CMD command - it executes the specified command, unlike RUN command it does not executed during build. eg. CMD "echo" welcome to my home.
+4. ENTRYPOINT command - entrypoint basically used to overwrite the whatever function CMD command does. when this command dies conatiner dies too.
+5. ADD command - it copies the files from the source on the host to container own filesystem at set destination level. eg. ADD /my_app_folder/my_app_folder
+6. ENV command - it is used to set environment variables. these variables consist of key value pair which can be accessed from container by script and application alike.
+7. WORKDIR command - it is used to set path where CMD command is to be executed eg. WORKDIR /path WORKDIR ~/
+8. EXPOSE command - set port that conatiner will expose. 
+9. MAINTAINER command - tag your name along with the image before uploading image to dockerhub after FROM command. 
+10. USER command - used to set UID which is to run the conatiner based on the image being build.
+11. VOLUME command - used to set custom path where conatiner will stores all the files. eg. VOLUME [ "/dir_|" , "dir_2" ..]
+12. LABEL command - used to set container description and keep it easy to manage all conatiner. LABEL Description="Bla bla bla giropops"
+13. COPY command - similar to add but can copy normal files and directories. eg.  COPY opa.txt /directory/
 
 
 
+Docker compose
 
+docker compose is used to run multi container application. each conatiner will stand alone as application and all application will communiocate with each other on single host. eg . MEAN full stack java script solution { M= mongo db ,E= express , A= angular ,N= node.js} used to make web application which is fast robust and maintainable. 
+ commands in  docker compose
+ 1. docker compose up
+ 2. docker compose buid -   used to build docker compose by using your docker yml file. In yml file we can specify which container we want to activate. 
