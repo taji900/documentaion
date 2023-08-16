@@ -1,1 +1,76 @@
 day 16 
+
+
+RDS, AURORA AND ELASTICACHE
+
+RDS-Relational databse service.
+RDS is used to create database in cloud which is managed by AWS. It uses SQL as query language.
+types of database 
+1. postgre
+2. mysql
+3. mariadb
+4. oracle
+5. microsoft
+6. aurora
+
+RDS- Auto scaling service
+
+helps to increase size of RDS database dynamically.
+it will modify the size of rda database when 
+a.  free storage is less than 10% of alloted storage.
+b. low-storage for atleast 5 minutes.
+c. 6 hrs have passed and no modificatio has been done.
+useful for application with unpredicatble workloads.
+support all database engines
+
+RDS Read replica for read scalibility
+
+can create upto 15 read replica within AZ, cross AZ cross region.
+replication should be asychronous so that read can eventually consistent
+replica can be promoted to their own database. 
+application must update the connection string to leverage read replica.
+
+used cases-
+- if you production databse that is running on normal load.
+- you want to run a reporting application to run some analytics
+- you can create read replica to run the new workload there.
+- the production application is unaffected.
+- red replica are useful for select'(=read) only kind of statements not ( INSERT, UPDATE, DELETE)
+
+RDS Read replica - network cost
+- In AWS there is network cost when data goes from one AZ TO another
+- for RDS there is no cost for read replica within same region. 
+
+RDA Multi AZ ( Disaster recovery)
+- SYNC replication
+- increase availability
+- failover in case of loss of AZ, loss of network , instance, or storage failure.
+-not used for scaling
+the read replicas be setup as multiaz for disaster recovery.
+
+RDS from single AZ to multi AZ
+zero downtime operation( no need to stop the RDS)
+
+A snapshot is taken.
+A new DB is created from snapshot in new AZ.
+Synchronization is established between the two databse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
