@@ -4,7 +4,7 @@ Dockerfile commands
 2. RUN command - it takes the command as argument to run to form an image, unlike CMD command which does not form image. eg. RUN apt-get install nginx
 3. CMD command - it executes the specified command, unlike RUN command it does not executed during build. eg. CMD "echo" welcome to my home.
 4. ENTRYPOINT command - entrypoint basically used to overwrite the whatever function CMD command does. when this command dies conatiner dies too.
-5. ADD command - it copies the files from the source on the host to container own filesystem at set destination level. eg. ADD /my_app_folder/my_app_folder
+5. ADD command -The ADD command is used to copy files/directories into a Docker image. ADD /my_app_folder/my_app_folder
 6. ENV command - it is used to set environment variables. these variables consist of key value pair which can be accessed from container by script and application alike.
 7. WORKDIR command - it is used to set path where CMD command is to be executed eg. WORKDIR /path WORKDIR ~/
 8. EXPOSE command - set port that conatiner will expose. 
