@@ -55,9 +55,14 @@ A snapshot is taken.
 A new DB is created from snapshot in new AZ.
 Synchronization is established between the two databse.
 
+Aurora
 
-jhgjhgkjhkjhmnmbnmbnbvbnvbvnbvnb 
-
+Postgre and mysql are both supported by aurora, your driver will work only if aurora was postgre and mysql.
+aurora is aws cloud optimized that mean it gives 5x performance over mysql on RDS and 3x performance as postgre.
+failover is instantaneous.
+aurora storage grows automatically on increment of 10 gb upto 128 tb.
+aurora can have upto 15 read replica and replication process is much faster than rds
+aurora cost more 20% and but it is more efficient.
 
 
 
