@@ -80,6 +80,20 @@ shared storage volume( auto expanding on increment of 10gb upto 128 tb.)
 writers end point(pointing toward master) - 
 readers end point- ( connection load balancing) -connection to all read replica
 
+Features of aurora
+
+1. automatic failover
+2. backup and recovery 
+3. isolation and security 
+4. industry compliance
+5. push button scaling
+6. automatic patching with zero downtime
+7. advance monitoring
+8. routine maintenace
+9. backtrack:restore data at any point of time without using backups.
+
+
+
 
 
 
